@@ -8,6 +8,7 @@ route = [
 		(
 			r"/auth/register",
 			auth.registerHandler
-		)
+		),
+		
 ]
 					
