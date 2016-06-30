@@ -33,7 +33,7 @@ class loginHandler(RequestHandler):
 			result = yield db.users.find_one({'$and':[{'password':password},{'regno':regno}]})
 		if bool(result):
 			self.set_secure_cookie("user", str(result['_id']))
-			self.render('/home', result=dict(userInfo=result))
+			self.redirect('/home')
 		else:
 			self.redirect("/auth/register?status=False")
 
