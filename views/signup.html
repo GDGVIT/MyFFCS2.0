@@ -1,24 +1,10 @@
 <html>
-<<<<<<< HEAD
-<head>
-	<title>Signup</title>
-</head>
-<body>
-<form action = "/auth/register" method="POST">
-regno<input type="text" name="regno">
-pass <input type="password" name="password">
-name <input type="text" name="name">
-<input type="submit" name="">
-</form>
-</body>
-</html>
-=======
   <head>
     <meta name="viewport" content="width=device-width" />
     <title>My FFCS | Login</title>
     <!--CSS-->
-    <link rel="stylesheet" href="css/materialize.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/static/css/materialize.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
     <!--JS-->
     <script   src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -53,11 +39,7 @@ not clash.'>
     ga('send', 'pageview');
     </script>
     <!-- End Google Analytics -->
-    <script>
-    <% if(data){%>
-     Materialize.toast('<%=message%>', 4000)
-    <%}%>
-    </script>
+    
     <div class="login-holder">
       <div class="row">
         <div class="col l8 m8 s8 push-l4 push-m4 push-s4 ">
@@ -70,10 +52,10 @@ not clash.'>
               <div class="row">
                 <div class="col s6 m6 l6 pull-s1">
                   <p class="login-header">Login</p>
-                  <form class="login-form" autocomplete="off" method="post" action="/login">
+                  <form class="login-form" autocomplete="off" method="post" action="/auth/login">
                     <div class="row">
                       <div class="input-field">
-                        <input id="login-regnum" type="text" name="username">
+                        <input id="login-regnum" type="text" name="regno">
                         <label for="login-regnum"  data-error="Enter a valid reg num">Registration Number</label>
                       </div>
                     </div>
@@ -87,7 +69,7 @@ not clash.'>
                 </div>
                 <div class="col s6 m6 l6" style="border-left: 1px solid #ddd;">
                   <p class="register-header">Register</p>
-                  <form class="register-form" autocomplete="off" method="post" action="/register">
+                  <form class="register-form" autocomplete="off" method="post" action="/auth/register">
                     <div class="row">
                       <div class="input-field">
                         <input id="reg-name" type="text" name="name">
@@ -188,4 +170,3 @@ not clash.'>
     });
   </script>
 </html>
->>>>>>> 31b3973138cca47efc36fa820321f8f653cf03db
