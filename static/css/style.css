@@ -35,13 +35,9 @@ select span{
 }
 .login-holder button{
   padding: 0px;
-  width: 100%!important;
   background-color: rgb(0,230,118);
   padding: 2%;
   border: none;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
   color: white;
   font-weight: bold;
 }
